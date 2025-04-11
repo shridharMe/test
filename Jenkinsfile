@@ -12,14 +12,14 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from repository
-                sh 'echo checkout'
+                sh 'wait 5'
             }
         }
         
         stage('Build') {
             steps {
                 // Example build steps
-                sh 'echo build'
+                sh  'wait 5'
                 
             
             }
@@ -27,7 +27,7 @@ pipeline {
         
         stage('Unit Tests') {
             steps {
-                sh 'echo test'
+                sh 'wait 5'
                 
             
             }
@@ -35,20 +35,20 @@ pipeline {
         
         stage('Code Analysis') {
             steps {
-                 sh 'echo Code Analysis'
+                 sh 'wait 5'
             }
         }
         
         stage('Docker Build') {
             steps {
-                 sh 'echo Build'
+                 sh 'wait 5'
             }
         }
         
         stage('Security Scan') {
             steps {
                 // Run security scanning
-                sh 'echo Security Scan'
+                sh 'wait 5'
             }
         }
         
